@@ -47,3 +47,17 @@ https://www.miketechuniverse.com/single-post/2017/10/27/Tutorial-for-Renesas-S5D
 ### Grove Connector Schematic
 
 ![](doc/img/grove-schematic.png)
+
+## Converting Bitmap into Array
+
+### Using LCD Assistant
+
+Download [LCD Assistant](http://en.radzio.dxp.pl/bitmap_converter/).
+
+Import monochrome bitmap.
+
+![](doc/img/lcd_assistant.png)
+
+Save output as c file. Copy array into `ssd1306_oled.c`.
+
+![](doc/img/bitmap-array.png)
