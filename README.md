@@ -38,7 +38,10 @@ https://www.miketechuniverse.com/single-post/2017/10/27/Tutorial-for-Renesas-S5D
 
 ![](doc/img/oppkey-presents.png)
 
-![](doc/img/sect-tutorial-mockup.png)
+![](doc/img/sandbox-tutorial-mockup.png)
+
+![](doc/img/learn.png)
+
 
 ### LCD Module Packaging
 
