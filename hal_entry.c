@@ -81,22 +81,20 @@ void hal_entry(void)
      err = g_ext_i2c_bus_slave_addr_set(SSD1306_I2C_ADDRESS);
      APP_ERROR_TRAP(err)
 
-     // Show Adafruit logo to credit their work
+     // Show logo (note code originally based on Adafruit work)
      oled_begin(SSD1306_SWITCHCAPVCC);  // initialize with the I2C addr 0x3D (for the 128x64)
      oled_display();
 
      delay(5000);
      clearBuffer(); // clears the screen and buffer
-     sprintf(msg,"=== OPPKEY ===");
+     sprintf(msg,"== OPPKEY ==");
      writedisplaybuffer(0, 0, msg, strlen(msg));
-     sprintf(msg,"    PRESENTS   ");
+     sprintf(msg,"  RENESAS   ");
      writedisplaybuffer(0, 16, msg, strlen(msg));
-     sprintf(msg,"  RENESAS SECT");
-     writedisplaybuffer(0, 32, msg, strlen(msg));
-     sprintf(msg,"    OLED I2C");
-     writedisplaybuffer(0, 48, msg, strlen(msg));
-     sprintf(msg,"    AE-CLOUD2");
-     writedisplaybuffer(0, 56, msg, strlen(msg));
+     sprintf(msg," MEDIUM ONE");
+     writedisplaybuffer(0, 34, msg, strlen(msg));
+     sprintf(msg,"  OLED I2C ");
+     writedisplaybuffer(0, 52, msg, strlen(msg));
 
      delay(2000);
      oled_display();
@@ -116,20 +114,35 @@ void hal_entry(void)
 //     for (uint8_t i=0; i<10; i++){
 //           writefontnum(i*8, 16, i);
 //     }
-     sprintf(msg,"    SYNERGY");
+     sprintf(msg,"    RENESAS");
      writedisplaybuffer(0, 2, msg, strlen(msg));
-     sprintf(msg,"  ENTERPRISE");
+     sprintf(msg,"  IOT SANDBOX");
      writedisplaybuffer(0, 16, msg, strlen(msg));
-     sprintf(msg," CLOUD TOOLBOX");
+     sprintf(msg," I2C TUTORIAL");
      writedisplaybuffer(0, 26, msg, strlen(msg));
-     sprintf(msg," I2C TUTORIAL ");
+     sprintf(msg," AE CLOUD1 ");
      writedisplaybuffer(0, 36, msg, strlen(msg));
-     sprintf(msg,"  BY MIKE LI");
+     sprintf(msg,"THANKS MIKE");
      writedisplaybuffer(0, 46, msg, strlen(msg));
      oled_display(); // draw the new image.
 
      delay (5000);
      clearBuffer(); // clears the screen and buffer
+
+     sprintf(msg,"   LEARN");
+      writedisplaybuffer(0, 2, msg, strlen(msg));
+      sprintf(msg,"  CREATE");
+      writedisplaybuffer(0, 16, msg, strlen(msg));
+      sprintf(msg,"  BUILD");
+      writedisplaybuffer(0, 26, msg, strlen(msg));
+      sprintf(msg," ADVANCED ");
+      writedisplaybuffer(0, 36, msg, strlen(msg));
+      sprintf(msg,"  FUN  ");
+      writedisplaybuffer(0, 46, msg, strlen(msg));
+      oled_display(); // draw the new image.
+
+      delay (5000);
+      clearBuffer(); // clears the screen and buffer
 
      //while (1);
 
